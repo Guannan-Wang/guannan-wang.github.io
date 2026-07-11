@@ -1,6 +1,31 @@
-# Research themes shown on /research/. Each theme lists representative
-# publications by their citekey (the _publications/<citekey>.md basename).
-# Optional: add `image: /images/research/<file>.jpg` to a theme for a figure.
+# ============================================================================
+# Research themes shown on /research/.  HOW TO EDIT (no coding needed):
+#
+# Each theme is one "- title:" block with three parts:
+#   title:   the heading (plain text).
+#   blurb:   the description. The ">" means "folded" — write as many wrapped
+#            lines as you like (each continuation line indented under blurb);
+#            they render as one paragraph. Use *word* for italics.
+#   papers:  a list of publications shown under the theme, in the order listed.
+#            Each entry is a "citekey" — the filename of the paper in
+#            _publications/ WITHOUT ".md" (e.g. wang2026evolutionary). You can
+#            also find it as the `citekey:` line inside any _publications/*.md.
+#
+# Common edits:
+#   • Reword a theme .......... edit its blurb text.
+#   • Reorder papers .......... reorder the lines under papers.
+#   • Add a paper ............. add a new "    - <citekey>" line.
+#   • Remove a paper .......... delete its line (the paper still shows on
+#                               /publications/ — this only affects this page).
+#   • Reorder / rename themes . move or edit a whole "- title:" block.
+#   • Add a theme ............. copy an existing block and change its contents.
+#   • Add a figure ............ add "  image: /images/research/<file>.jpg" under
+#                               the title, and put the image in images/research/.
+#
+# Notes: keep the 2-space indentation exactly as shown. A citekey that doesn't
+# match a paper is silently skipped (won't break the build). After saving,
+# the Codespace preview refreshes automatically.
+# ============================================================================
 - title: "Genomic adaptation in extremophytes"
   blurb: >
     How do plants that thrive in extreme soils — high salinity, toxic boron,
