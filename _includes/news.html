@@ -1,0 +1,26 @@
+{%- comment -%}
+  Homepage News feed. Reads _data/news.yml, newest first, shows up to 5.
+  Each item gets a type icon (paper / talk / award, else a star). Renders
+  nothing when the file is empty (graceful degradation).
+{%- endcomment -%}
+{% assign items = site.data.news | sort: "date" | reverse %}
+{% if items and items.size > 0 %}
+  <section class="home-section news">
+    <div class="home-section__head">
+      <h2 class="home-section__title">News</h2>
+    </div>
+    <ul class="news__list">
+      {% for item in items limit: 5 %}
+        <li class="news__item">
+          <span class="news__icon news__icon--{{ item.type | default: 'news' }}" aria-hidden="true">
+            <i class="{% case item.type %}{% when 'paper' %}fa-solid fa-file-lines{% when 'talk' %}fa-solid fa-microphone-lines{% when 'award' %}fa-solid fa-award{% else %}fa-solid fa-star{% endcase %}"></i>
+          </span>
+          <div class="news__body">
+            <span class="news__date">{{ item.date | date: "%b %Y" }}</span>
+            <span class="news__text">{{ item.text | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}

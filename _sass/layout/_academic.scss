@@ -455,6 +455,59 @@ button:focus-visible,
 }
 
 /* --------------------------------------------------------------------------
+   Homepage News feed
+   -------------------------------------------------------------------------- */
+
+.news__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.news__item {
+  display: flex;
+  gap: 0.85rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--border);
+
+  &:last-child { border-bottom: 0; }
+}
+
+.news__icon {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  background: var(--soft);
+  color: var(--accent);
+  font-size: 0.85rem;
+  margin-top: 0.1rem;
+}
+
+.news__body { flex: 1 1 auto; min-width: 0; }
+
+.news__date {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  margin-bottom: 0.1rem;
+}
+
+.news__text {
+  color: var(--ink);
+  font-size: 0.95rem;
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { color: var(--accent-hover); text-decoration: underline; }
+  em { font-style: italic; }
+}
+
+/* --------------------------------------------------------------------------
    Research themes
    -------------------------------------------------------------------------- */
 
