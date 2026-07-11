@@ -4,7 +4,7 @@ type: journal
 date: 2023-01-01
 venue: "The Plant Journal"
 authors: "Kieu-Nga Tran, Pramod Pantha, Guannan Wang, Narender Kumar, Chathura Wijesinghege, Dong-Ha Oh, Samadhi Wimalagunasekara, Nick Duppen, Hongfei Li, Hyewon Hong, others"
-selected: false
+selected: true
 bibtex: |
   @article{tran2023balancing,
     title     = {Balancing growth amidst salt stress--lifestyle perspectives from the extremophyte model Schrenkiella parvula},

@@ -4,7 +4,7 @@ type: journal
 date: 2026-01-01
 venue: "Nature Communications"
 authors: "Guannan Wang, Kook Hui Ryu, Andrea Dinneny, Jiyoung Lee, Dong-Ha Oh, Prashanth Ramachandran, Marina Oliva, Ryan Lister, Jos\\'e R Dinneny, John Schiefelbein, others"
-selected: false
+selected: true
 bibtex: |
   @article{wang2026evolutionary,
     title     = {Evolutionary diversity of cell-type-specific expression and stress response in Brassicaceae roots},
