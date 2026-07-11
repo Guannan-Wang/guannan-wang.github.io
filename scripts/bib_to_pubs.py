@@ -19,6 +19,7 @@ Behavior (see design spec section 4):
 Review the diff, then commit.
 """
 
+import hashlib
 import os
 import re
 import sys
@@ -290,10 +291,24 @@ def main():
         print("No entries parsed from %s" % bib_path)
         return 1
     os.makedirs(PUB_DIR, exist_ok=True)
-    created, updated = 0, 0
+    created, updated, dupes, disamb = 0, 0, 0, 0
+    seen = {}  # slug -> title, to detect collisions within this run
     for e in entries:
-        key = e.get("_key") or slugify(e.get("title", "ref"))
-        slug = slugify(key)
+        base = slugify(e.get("_key") or e.get("title", "ref"))
+        title = e.get("title", "")
+        slug = base
+        if base in seen:
+            if seen[base].strip().lower() == title.strip().lower():
+                # Genuine duplicate entry (same key AND same title) — skip it.
+                dupes += 1
+                print("  duplicate skipped: %s (%s)" % (base, title[:55]))
+                continue
+            # Same key, different paper: append a stable title-hash suffix.
+            suffix = hashlib.md5(title.encode("utf-8")).hexdigest()[:4]
+            slug = "%s-%s" % (base, suffix)
+            disamb += 1
+            print("  collision disambiguated: %s -> %s" % (base, slug))
+        seen[slug] = title
         path = os.path.join(PUB_DIR, slug + ".md")
         existed = os.path.exists(path)
         preserved = read_existing(path)
@@ -307,7 +322,8 @@ def main():
             updated += 1
         else:
             created += 1
-    print("Done: %d created, %d updated (%d entries)." % (created, updated, len(entries)))
+    print("Done: %d created, %d updated, %d duplicate(s) skipped, %d collision(s) disambiguated (%d entries)."
+          % (created, updated, dupes, disamb, len(entries)))
     print("Review the diff, then commit.")
     return 0
 
