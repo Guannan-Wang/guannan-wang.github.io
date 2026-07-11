@@ -1,0 +1,22 @@
+{
+  "name": "Guannan-Wang.github.io",
+  "image": "mcr.microsoft.com/devcontainers/ruby:1-3.3-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "lts" }
+  },
+  "forwardPorts": [4000, 35729],
+  "portsAttributes": {
+    "4000": { "label": "Jekyll preview", "onAutoForward": "openBrowserOnce" },
+    "35729": { "label": "LiveReload", "onAutoForward": "silent" }
+  },
+  "postCreateCommand": "bundle install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "sissel.shopify-liquid",
+        "yzhang.markdown-all-in-one",
+        "streetsidesoftware.code-spell-checker"
+      ]
+    }
+  }
+}
