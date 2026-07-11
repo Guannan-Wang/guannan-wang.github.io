@@ -48,14 +48,24 @@ author:
     - "Comparative Omics"
     - "Single-Cell Genomics"
 
-# Publication Category - The following the list of publication categories and their headings
-publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'    
-  conferences:
-    title: 'Conference Papers'
+# Publications (Phase 4). Grouped by `type` (journal → conference → preprint),
+# newest-first within each group. Headings + fixed order:
+publication_types:
+  - key: journal
+    title: "Journal Articles"
+  - key: conference
+    title: "Conference Papers"
+  - key: preprint
+    title: "Preprints"
+
+# Author name variants auto-bolded in publication author lists (longest first,
+# so "Guannan Wang" is matched before "G. Wang"). Never hand-bold in the data.
+author_name_variants:
+  - "Guannan Wang"
+  - "Wang, Guannan"
+  - "G. Wang"
+  - "Wang, G."
+  - "Wang G"
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews

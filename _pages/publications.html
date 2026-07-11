@@ -2,31 +2,39 @@
 layout: archive
 title: "Publications"
 permalink: /publications/
-author_profile: true
+author_profile: false
 ---
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
+<div class="pubs">
+  <div class="pubs__filters" role="group" aria-label="Filter publications by type">
+    <button type="button" class="pub-chip is-active" data-filter="all" aria-pressed="true">All</button>
+    {% for t in site.publication_types %}
+      {% assign has = site.publications | where: "type", t.key %}
+      {% if has and has.size > 0 %}
+        <button type="button" class="pub-chip" data-filter="{{ t.key }}" aria-pressed="false">{{ t.title }}</button>
       {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
     {% endfor %}
+  </div>
+
+  {% assign any = false %}
+  {% for t in site.publication_types %}
+    {% assign group = site.publications | where: "type", t.key | sort: "date" | reverse %}
+    {% if group and group.size > 0 %}
+      {% assign any = true %}
+      <section class="pubs__group" data-group="{{ t.key }}">
+        <h2 class="pubs__group-title">{{ t.title }}</h2>
+        {% for post in group %}
+          {% include publication-card.html pub=post %}
+        {% endfor %}
+      </section>
+    {% endif %}
   {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
 
+  {% unless any %}
+    <p class="pubs__empty">Publications will appear here soon.</p>
+  {% endunless %}
+</div>
 
-
+<script src="{{ base_path }}/assets/js/pubs.js"></script>
