@@ -24,3 +24,7 @@ package-lock.json
 
 # Ignore Jekyll 4 cache (future-proofing)
 .jekyll-cache/
+
+# Python bytecode cache (from running the converter locally)
+__pycache__/
+*.pyc
