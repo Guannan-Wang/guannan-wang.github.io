@@ -1,0 +1,22 @@
+{%- comment -%}
+  Citation metrics strip. Reads _data/scholar.yml (written by the weekly Scholar
+  sync). Degrades gracefully: renders nothing until that file exists with at
+  least one metric, so a blocked/absent sync never shows empty boxes.
+{%- endcomment -%}
+{% assign s = site.data.scholar %}
+{% if s and s.citations or s.h_index or s.i10_index %}
+  <dl class="metrics" aria-label="Citation metrics">
+    {% if s.citations %}
+      <div class="metric"><dt>Citations</dt><dd>{{ s.citations }}</dd></div>
+    {% endif %}
+    {% if s.h_index %}
+      <div class="metric"><dt>h-index</dt><dd>{{ s.h_index }}</dd></div>
+    {% endif %}
+    {% if s.i10_index %}
+      <div class="metric"><dt>i10-index</dt><dd>{{ s.i10_index }}</dd></div>
+    {% endif %}
+    {% if s.updated %}
+      <p class="metrics__note">Source: Google Scholar, updated {{ s.updated }}</p>
+    {% endif %}
+  </dl>
+{% endif %}

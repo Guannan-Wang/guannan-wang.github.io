@@ -1,0 +1,7 @@
+# Citation metrics shown in the homepage hero strip.
+# Auto-updated weekly by scripts/scholar_sync.py (.github/workflows/scholar.yml).
+# Last-good values are cached: a blocked fetch never blanks these.
+citations: 461
+h_index: 11
+i10_index: 13
+updated: "2026-07-11"

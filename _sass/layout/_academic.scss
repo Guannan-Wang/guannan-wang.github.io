@@ -185,17 +185,18 @@ button:focus-visible,
   white-space: nowrap;
 }
 
-/* Hero metrics strip (degrades gracefully — renders nothing without data) */
-.hero__metrics {
+/* Citation metrics strip (Publications page; degrades gracefully) */
+.metrics {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0.9rem 0 0;
-  border-top: 1px solid var(--border);
+  align-items: baseline;
+  gap: 1.75rem;
+  margin: 0 0 1.75rem;
+  padding: 0 0 1.1rem;
+  border-bottom: 1px solid var(--border);
 }
 
-.hero__metric {
+.metric {
   dt {
     font-size: 0.75rem;
     text-transform: uppercase;
@@ -204,16 +205,16 @@ button:focus-visible,
   }
   dd {
     margin: 0;
-    font-size: 1.35rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--ink);
     font-family: var(--font-serif);
   }
 }
 
-.hero__metrics-note {
+.metrics__note {
   flex-basis: 100%;
-  margin: 0.2rem 0 0;
+  margin: 0.1rem 0 0;
   font-size: 0.72rem;
   color: var(--muted);
 }
@@ -271,8 +272,7 @@ button:focus-visible,
   .hero__photo { width: 140px; }
 
   .hero__links,
-  .hero__tags,
-  .hero__metrics {
+  .hero__tags {
     justify-content: center;
   }
 

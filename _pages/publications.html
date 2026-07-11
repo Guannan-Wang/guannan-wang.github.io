@@ -8,6 +8,8 @@ author_profile: true
 {% include base_path %}
 
 <div class="pubs">
+  {% include scholar-metrics.html %}
+
   <div class="pubs__filters" role="group" aria-label="Filter publications by type">
     <button type="button" class="pub-chip is-active" data-filter="all" aria-pressed="true">All</button>
     {% for t in site.publication_types %}
