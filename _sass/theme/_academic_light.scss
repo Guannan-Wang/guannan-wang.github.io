@@ -1,0 +1,75 @@
+/* ==========================================================================
+    ACADEMIC THEME - LIGHT VERSION
+    Warm cream base, near-black ink, indigo accent.
+   ========================================================================== */
+
+/* Compile-time settings consumed by layout partials */
+$primary-color              : #4F46B5;
+$gray                       : #6b6862;
+$dark-gray                  : #22201d;
+$darker-gray                : #22201d;
+$light-gray                 : #746f67;
+$lighter-gray               : #e8e2d8;
+
+/* Color codes used for the site */
+$danger-color               : #ee5f5b;
+$info-color                 : #4F46B5;
+$notice-color               : #6b6862;
+$success-color              : #62c462;
+$warning-color              : #f89406;
+
+/* Other basic settings for the template */
+$border-radius              : 6px;
+$box-shadow                 : 0 1px 2px rgba(34, 32, 29, 0.06);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+/* Typography: Newsreader (headings) + Inter (body/UI) */
+$global-font-family         : "Inter", -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+$header-font-family         : "Newsreader", Georgia, "Times New Roman", serif;
+$caption-font-family        : $global-font-family;
+
+/* Light theme */
+:root {
+    /* Design tokens */
+    --bg              : #FAF6F1;
+    --card            : #FFFDFA;
+    --ink             : #22201d;
+    --sec             : #6b6862;
+    --muted           : #746f67;   /* darkened from #9a968f for AA contrast */
+    --border          : #e8e2d8;
+    --accent          : #4F46B5;
+    --accent-hover    : #3f38a0;
+    --soft            : #ECEAFA;
+
+    --font-serif      : "Newsreader", Georgia, "Times New Roman", serif;
+    --font-sans       : "Inter", -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+    --space-unit      : 8px;
+    --content-width   : 800px;
+    --section-gap     : 3.75rem;
+    --radius-card     : 10px;
+    --radius-btn      : 6px;
+
+    /* Template variable mapping */
+    --global-base-color                 : var(--accent);
+    --global-bg-color                   : var(--bg);
+    --global-footer-bg-color            : var(--card);
+    --global-border-color               : var(--border);
+    --global-dark-border-color          : #d8d1c4;
+    --global-code-background-color      : #f3efe6;
+    --global-code-text-color            : var(--ink);
+    --global-fig-caption-color          : var(--muted);
+    --global-link-color                 : var(--accent);
+    --global-link-color-hover           : var(--accent-hover);
+    --global-link-color-visited         : var(--accent);
+    --global-masthead-link-color        : var(--ink);
+    --global-masthead-link-color-hover  : var(--accent);
+    --global-text-color                 : var(--ink);
+    --global-text-color-light           : var(--sec);
+    --global-thead-color                : var(--border);
+}

@@ -1,0 +1,64 @@
+/* ==========================================================================
+    ACADEMIC THEME - DARK VERSION
+    Warm near-black (not pure black), lightened indigo accent.
+   ========================================================================== */
+
+/* Compile-time settings (must mirror the light file — this file is imported
+   last, so these values are what layout partials compile against) */
+$primary-color              : #4F46B5;
+$gray                       : #6b6862;
+$dark-gray                  : #22201d;
+$darker-gray                : #22201d;
+$light-gray                 : #746f67;
+$lighter-gray               : #e8e2d8;
+
+$danger-color               : #ee5f5b;
+$info-color                 : #4F46B5;
+$notice-color               : #6b6862;
+$success-color              : #62c462;
+$warning-color              : #f89406;
+
+$border-radius              : 6px;
+$box-shadow                 : 0 1px 2px rgba(34, 32, 29, 0.06);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+$global-font-family         : "Inter", -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+$header-font-family         : "Newsreader", Georgia, "Times New Roman", serif;
+$caption-font-family        : $global-font-family;
+
+/* Dark theme */
+html[data-theme="dark"] {
+    /* Design tokens */
+    --bg              : #1a1815;
+    --card            : #24211d;
+    --ink             : #ede9e2;
+    --sec             : #c4bfb6;
+    --muted           : #8e8980;   /* lightened from #8a857c for AA contrast */
+    --border          : #38342e;
+    --accent          : #9a94ec;
+    --accent-hover    : #aea9f1;
+    --soft            : #2c2942;
+
+    /* Template variable mapping */
+    --global-base-color                 : var(--accent);
+    --global-bg-color                   : var(--bg);
+    --global-footer-bg-color            : var(--card);
+    --global-border-color               : var(--border);
+    --global-dark-border-color          : #4a453d;
+    --global-code-background-color      : #211e1a;
+    --global-code-text-color            : var(--ink);
+    --global-fig-caption-color          : var(--muted);
+    --global-link-color                 : var(--accent);
+    --global-link-color-hover           : var(--accent-hover);
+    --global-link-color-visited         : var(--accent);
+    --global-masthead-link-color        : var(--ink);
+    --global-masthead-link-color-hover  : var(--accent);
+    --global-text-color                 : var(--ink);
+    --global-text-color-light           : var(--sec);
+    --global-thead-color                : var(--card);
+}

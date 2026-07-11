@@ -1,0 +1,12 @@
+/* ==========================================================================
+   ACADEMIC DESIGN SYSTEM - base polish
+   Imported last so it wins the cascade over the stock layout partials.
+   ========================================================================== */
+
+body {
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
