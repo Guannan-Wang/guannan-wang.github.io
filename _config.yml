@@ -24,7 +24,7 @@ repository               : "Guannan-Wang/Guannan-Wang.github.io"
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
-  avatar           : # e.g. "profile.png" — added in Phase 6
+  avatar           : "myself.jpeg"
   name             : "Guannan Wang"
   pronouns         :
   bio              : "Postdoctoral Researcher, Dinneny Lab, Stanford University/HHMI"
