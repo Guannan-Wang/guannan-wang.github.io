@@ -5,6 +5,8 @@ date: 2022-01-01
 venue: "bioRxiv"
 authors: "Chathura Wijesinghege, Guannan Wang, Pramod Pantha, Kieu-Nga Tran, Maheshi Dassanayake"
 selected: false
+links:
+  doi: https://doi.org/10.1101/2022.10.24.513627
 bibtex: |
   @article{wijesinghege2022spatiotemporal,
     title     = {Spatiotemporal gene expression atlas of the extremophyte Schrenkiella parvula},
@@ -12,7 +14,8 @@ bibtex: |
     journal   = {bioRxiv},
     pages     = {2022--10},
     year      = {2022},
-    publisher = {Cold Spring Harbor Laboratory}
+    publisher = {Cold Spring Harbor Laboratory},
+    doi       = {10.1101/2022.10.24.513627}
   }
 ---
 

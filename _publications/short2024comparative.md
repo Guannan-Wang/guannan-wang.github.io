@@ -5,6 +5,8 @@ date: 2024-01-01
 venue: "Tree Physiology"
 authors: "Aidan W Short, John Sunoj V Sebastian, Jie Huang, Guannan Wang, Maheshi Dassanayake, Patrick M Finnegan, John D Parker, Kun-Fang Cao, Alison KS Wee"
 selected: false
+links:
+  doi: https://doi.org/10.1093/treephys/tpae019
 bibtex: |
   @article{short2024comparative,
     title     = {Comparative transcriptomics of the chilling stress response in two Asian mangrove species, Bruguiera gymnorhiza and Rhizophora apiculata},
@@ -14,7 +16,8 @@ bibtex: |
     number    = {3},
     pages     = {tpae019},
     year      = {2024},
-    publisher = {Oxford University Press}
+    publisher = {Oxford University Press},
+    doi       = {10.1093/treephys/tpae019}
   }
 ---
 

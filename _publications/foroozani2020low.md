@@ -5,6 +5,8 @@ date: 2020-01-01
 venue: "Plant physiology"
 authors: "Maryam Foroozani, Sara Zahraeifard, Dong-Ha Oh, Guannan Wang, Maheshi Dassanayake, Aaron P Smith"
 selected: false
+links:
+  doi: https://doi.org/10.1104/pp.19.01153
 bibtex: |
   @article{foroozani2020low,
     title     = {Low-phosphate chromatin dynamics predict a cell wall remodeling network in rice shoots},
@@ -14,7 +16,8 @@ bibtex: |
     number    = {3},
     pages     = {1494--1509},
     year      = {2020},
-    publisher = {American Society of Plant Biologists}
+    publisher = {American Society of Plant Biologists},
+    doi       = {10.1104/pp.19.01153}
   }
 ---
 

@@ -5,6 +5,8 @@ date: 2022-01-01
 venue: "New Phytologist"
 authors: "Gil Eshel, Nick Duppen, Guannan Wang, Dong-Ha Oh, Yana Kazachkova, Pawel Herzyk, Anna Amtmann, Michal Gordon, Vered Chalifa-Caspi, Michelle Arland Oscar, others"
 selected: true
+links:
+  doi: https://doi.org/10.1111/nph.18411
 bibtex: |
   @article{eshel2022positive,
     title     = {Positive selection and heat-response transcriptomes reveal adaptive features of the Brassicaceae desert model, Anastatica hierochuntica},
@@ -13,7 +15,8 @@ bibtex: |
     volume    = {236},
     number    = {3},
     pages     = {1006--1026},
-    year      = {2022}
+    year      = {2022},
+    doi       = {10.1111/nph.18411}
   }
 ---
 
