@@ -455,3 +455,50 @@ button:focus-visible,
   .pub-card { flex-direction: column; gap: 0.5rem; }
   .pub-card__thumb { width: 120px; }
 }
+
+/* --------------------------------------------------------------------------
+   CV page
+   -------------------------------------------------------------------------- */
+
+.cv-contact {
+  color: var(--sec);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: -0.5rem 0 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.archive h2 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  margin-top: 2.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   Print stylesheet (tidy PDF from /cv/, and any page)
+   -------------------------------------------------------------------------- */
+
+@media print {
+  .masthead,
+  .page__footer,
+  .skip-link,
+  #theme-toggle,
+  .pubs__filters,
+  .home-section__more { display: none !important; }
+
+  body {
+    padding: 0 !important;
+    color: #000;
+    background: #fff;
+    font-size: 11pt;
+  }
+
+  #main { margin-top: 0; }
+  .archive, .pubs, .home-section { max-width: none; }
+
+  a { color: #000; text-decoration: none; }
+
+  h1, h2, h3 { break-after: avoid; }
+  .pub-card, li { break-inside: avoid; }
+}
