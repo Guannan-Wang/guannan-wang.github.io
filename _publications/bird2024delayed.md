@@ -3,7 +3,7 @@ title: "Delayed leaf greening involves a major shift in the expression of cytoso
 type: journal
 date: 2024-01-01
 venue: "Plant and Soil"
-authors: "Toby Bird, Benjamin J Nestor, Philipp E Bayer, Guannan Wang, Albina Ilyasova, Cl\\'ement E Gille, Bryce EH Soraru, Kosala Ranathunge, Anita A Severn-Ellis, Ricarda Jost, others"
+authors: "Toby Bird, Benjamin J Nestor, Philipp E Bayer, Guannan Wang, Albina Ilyasova, Cl\\'ement E Gille, Bryce EH Soraru, Kosala Ranathunge, Anita A Severn-Ellis, Ricarda Jost, et al."
 selected: false
 links:
   doi: https://doi.org/10.1007/s11104-023-06275-1

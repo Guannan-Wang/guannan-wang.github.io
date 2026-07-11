@@ -160,8 +160,13 @@ def format_authors(raw):
     people = [p.strip() for p in re.split(r"\s+and\s+", raw) if p.strip()]
     out = []
     for p in people:
+        if p.lower() == "others":
+            out.append("et al.")
+            continue
         if "," in p:
             last, first = [x.strip() for x in p.split(",", 1)]
+            # A trailing "*" on the last name marks co-first authorship; keep it
+            # attached to the rendered "First Last*".
             out.append((first + " " + last).strip())
         else:
             out.append(p)

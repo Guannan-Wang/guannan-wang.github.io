@@ -1,0 +1,21 @@
+# Teaching shown on /teaching/, grouped by role.
+- role: "Instructor of Record"
+  items:
+    - title: "Adjunct Instructor, SCI 1001"
+      org: "College of Science, Louisiana State University"
+      date: "2022"
+
+- role: "Teaching Assistant"
+  items:
+    - title: "Teaching Assistant, BIOL 1208"
+      org: "Department of Biological Sciences, Louisiana State University"
+      date: "2016, 2019"
+
+- role: "Workshops & Specialized Instruction"
+  items:
+    - title: "Co-Organizer & Instructor, \"Comparative RNA-seq Bootcamp\" (6-week NSF EDGE Workshop)"
+      org: "Louisiana State University & McMaster University"
+      date: "Summer 2021"
+    - title: "Workshop Lead, \"Transcriptome Analysis in Forestry\" (10-day Workshop)"
+      org: "Guangxi University, China"
+      date: "Jul 2018"

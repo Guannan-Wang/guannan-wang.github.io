@@ -283,14 +283,6 @@ button:focus-visible,
    Publications (Phase 4): archive column, filter chips, cards, Cite
    -------------------------------------------------------------------------- */
 
-/* Constrain the archive column (publications/talks/teaching) to the content
-   width, centered — matches the hero. */
-.archive {
-  max-width: var(--content-width);
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .pubs__filters {
   display: flex;
   flex-wrap: wrap;
@@ -454,6 +446,64 @@ button:focus-visible,
 @media (max-width: 600px) {
   .pub-card { flex-direction: column; gap: 0.5rem; }
   .pub-card__thumb { width: 120px; }
+}
+
+.pubs__note {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* --------------------------------------------------------------------------
+   Talks & Teaching rows
+   -------------------------------------------------------------------------- */
+
+.talks__group { margin-bottom: 2.5rem; }
+
+.talks__group-title {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  margin: 0 0 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.talk-row {
+  display: flex;
+  gap: 1.25rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.talk-row__date {
+  flex: 0 0 5.5rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  padding-top: 0.1rem;
+}
+
+.talk-row__body { flex: 1 1 auto; min-width: 0; }
+
+.talk-row__title {
+  margin: 0 0 0.15rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.talk-row__venue {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--sec);
+
+  .talk-row__venue-name { font-style: italic; }
+}
+
+@media (max-width: 600px) {
+  .talk-row { flex-direction: column; gap: 0.15rem; }
+  .talk-row__date { flex-basis: auto; }
 }
 
 /* --------------------------------------------------------------------------

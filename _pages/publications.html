@@ -2,7 +2,7 @@
 layout: archive
 title: "Publications"
 permalink: /publications/
-author_profile: false
+author_profile: true
 ---
 
 {% include base_path %}
@@ -35,6 +35,8 @@ author_profile: false
   {% unless any %}
     <p class="pubs__empty">Publications will appear here soon.</p>
   {% endunless %}
+
+  <p class="pubs__note">* Co-first author</p>
 </div>
 
 <script src="{{ base_path }}/assets/js/pubs.js"></script>

@@ -14,5 +14,6 @@
     {% for post in selected limit: 4 %}
       {% include publication-card.html pub=post %}
     {% endfor %}
+    <p class="pubs__note">* Co-first author</p>
   </section>
 {% endif %}
