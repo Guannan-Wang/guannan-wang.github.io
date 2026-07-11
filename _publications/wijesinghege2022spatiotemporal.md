@@ -1,6 +1,7 @@
 ---
 title: "Spatiotemporal gene expression atlas of the extremophyte Schrenkiella parvula"
 type: preprint
+citekey: wijesinghege2022spatiotemporal
 date: 2022-01-01
 venue: "bioRxiv"
 authors: "Chathura Wijesinghege, Guannan Wang, Pramod Pantha, Kieu-Nga Tran, Maheshi Dassanayake"

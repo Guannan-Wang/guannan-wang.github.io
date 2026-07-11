@@ -1,6 +1,7 @@
 ---
 title: "Tasting evolution in a sea asparagus salad: Dissecting polyploid evolution and aquaporin function in Salicornia"
-type: journal
+type: commentary
+citekey: wang2026tasting
 date: 2026-01-01
 venue: "Plant Physiology"
 authors: "Guannan Wang"

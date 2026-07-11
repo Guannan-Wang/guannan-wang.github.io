@@ -1,6 +1,7 @@
 ---
 title: "Ordered sacrifice for survival: insights from drought-stressed fine roots in soybean"
-type: journal
+type: commentary
+citekey: wang2026ordered
 date: 2026-01-01
 venue: "Plant Physiology"
 authors: "Guannan Wang"

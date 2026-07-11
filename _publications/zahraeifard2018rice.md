@@ -1,6 +1,7 @@
 ---
 title: "Rice H2A. Z negatively regulates genes responsive to nutrient starvation but promotes expression of key housekeeping genes"
 type: journal
+citekey: zahraeifard2018rice
 date: 2018-01-01
 venue: "Journal of experimental botany"
 authors: "Sara Zahraeifard, Maryam Foroozani, Aliasghar Sepehri, Dong-Ha Oh, Guannan Wang, Venkata Mangu, Bin Chen, Niranjan Baisakh, Maheshi Dassanayake, Aaron P Smith"

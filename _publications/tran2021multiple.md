@@ -1,6 +1,7 @@
 ---
 title: "Multiple paths lead to salt tolerance-pre-adaptation vs dynamic responses from two closely related extremophytes"
 type: preprint
+citekey: tran2021multiple
 date: 2021-01-01
 venue: "bioRxiv"
 authors: "Kieu-Nga Tran, Guannan Wang, Dong-Ha Oh, John C Larkin, Aaron P Smith, Maheshi Dassanayake"

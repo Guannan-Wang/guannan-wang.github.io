@@ -1,6 +1,7 @@
 ---
 title: "Comparative transcriptomics of the chilling stress response in two Asian mangrove species, Bruguiera gymnorhiza and Rhizophora apiculata"
 type: journal
+citekey: short2024comparative
 date: 2024-01-01
 venue: "Tree Physiology"
 authors: "Aidan W Short, John Sunoj V Sebastian, Jie Huang, Guannan Wang, Maheshi Dassanayake, Patrick M Finnegan, John D Parker, Kun-Fang Cao, Alison KS Wee"

@@ -1,6 +1,7 @@
 ---
 title: "Delayed leaf greening involves a major shift in the expression of cytosolic and mitochondrial ribosomes to plastid ribosomes in the highly phosphorus-use-efficient Hakea prostrata (Proteaceae)"
 type: journal
+citekey: bird2024delayed
 date: 2024-01-01
 venue: "Plant and Soil"
 authors: "Toby Bird, Benjamin J Nestor, Philipp E Bayer, Guannan Wang, Albina Ilyasova, Cl\\'ement E Gille, Bryce EH Soraru, Kosala Ranathunge, Anita A Severn-Ellis, Ricarda Jost, et al."

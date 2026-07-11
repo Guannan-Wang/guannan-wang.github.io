@@ -1,6 +1,7 @@
 ---
 title: "Excreting the Stress: A Novel Regulatory Cascade Drives Salt Gland Development in Limonium bicolor"
-type: journal
+type: commentary
+citekey: wang2026excreting
 date: 2026-01-01
 venue: "Plant Physiology"
 authors: "Guannan Wang"

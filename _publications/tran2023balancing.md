@@ -1,6 +1,7 @@
 ---
 title: "Balancing growth amidst salt stress--lifestyle perspectives from the extremophyte model Schrenkiella parvula"
 type: journal
+citekey: tran2023balancing
 date: 2023-01-01
 venue: "The Plant Journal"
 authors: "Kieu-Nga Tran*, Pramod Pantha*, Guannan Wang*, Narender Kumar*, Chathura Wijesinghege, Dong-Ha Oh, Samadhi Wimalagunasekara, Nick Duppen, Hongfei Li, Hyewon Hong, et al."

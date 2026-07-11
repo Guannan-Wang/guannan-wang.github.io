@@ -1,6 +1,7 @@
 ---
 title: "The HIGH CHLOROPHYLL FLUORESCENCE 244 homolog CrHCF244 is required for psbA (D1) translation in Chlamydomonas reinhardtii"
 type: journal
+citekey: wang2025high
 date: 2025-01-01
 venue: "Journal of Experimental Botany"
 authors: "Xiaozhuo Wang, Guannan Wang, Lexi A Cheramie, Cuiping Zhao, Maheshi Dassanayake, James V Moroney, David J Vinyard"

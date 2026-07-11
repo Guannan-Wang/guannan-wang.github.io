@@ -140,6 +140,9 @@ def slugify(s):
 
 def guess_type(entry):
     et = entry.get("_type", "")
+    kw = entry.get("keywords", "").lower()
+    if "commentary" in kw or "editorial" in kw:
+        return "commentary"
     venue = (entry.get("journal", "") + " " +
              entry.get("archiveprefix", "") + " " +
              entry.get("eprint", "")).lower()
@@ -261,6 +264,7 @@ def build_markdown(entry, preserved):
     lines = ["---"]
     lines.append("title: " + yaml_quote(title))
     lines.append("type: " + ptype)
+    lines.append("citekey: " + (entry.get("_key") or ""))
     lines.append("date: " + date)
     lines.append("venue: " + yaml_quote(venue))
     lines.append("authors: " + yaml_quote(authors))

@@ -1,6 +1,7 @@
 ---
 title: "Two roads to lignin: uncovering the role of C4H in rice lignification"
-type: journal
+type: commentary
+citekey: wang2025two
 date: 2025-01-01
 venue: "Plant Physiology"
 authors: "Guannan Wang"

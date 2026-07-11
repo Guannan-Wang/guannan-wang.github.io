@@ -1,6 +1,7 @@
 ---
 title: "Plant growth and Agrobacterium-mediated floral-dip transformation of the extremophyte Schrenkiella parvula"
 type: journal
+citekey: wang2019plant
 date: 2019-01-01
 venue: "Journal of Visualized Experiments"
 authors: "Guannan Wang, Pramod Pantha, Kieu-Nga Tran, Dong-Ha Oh, Maheshi Dassanayake"

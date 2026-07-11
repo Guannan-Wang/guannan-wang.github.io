@@ -1,6 +1,7 @@
 ---
 title: "Global awakening of cryptic biosynthetic gene clusters in Burkholderia thailandensis"
 type: journal
+citekey: gupta2017global
 date: 2017-01-01
 venue: "ACS Chemical biology"
 authors: "Ashish Gupta, Renesh Bedre, Sudarshan Singh Thapa, Afsana Sabrin, Guannan Wang, Maheshi Dassanayake, Anne Grove"

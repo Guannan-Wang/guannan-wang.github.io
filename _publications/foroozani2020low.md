@@ -1,6 +1,7 @@
 ---
 title: "Low-phosphate chromatin dynamics predict a cell wall remodeling network in rice shoots"
 type: journal
+citekey: foroozani2020low
 date: 2020-01-01
 venue: "Plant physiology"
 authors: "Maryam Foroozani, Sara Zahraeifard, Dong-Ha Oh, Guannan Wang, Maheshi Dassanayake, Aaron P Smith"

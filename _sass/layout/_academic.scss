@@ -455,6 +455,63 @@ button:focus-visible,
 }
 
 /* --------------------------------------------------------------------------
+   Research themes
+   -------------------------------------------------------------------------- */
+
+.research-theme {
+  margin-bottom: 2.75rem;
+  padding-bottom: 0.5rem;
+}
+
+.research-theme__title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  margin: 0 0 0.6rem;
+}
+
+.research-theme__image {
+  width: 100%;
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border);
+  margin-bottom: 0.9rem;
+}
+
+.research-theme__blurb {
+  color: var(--sec);
+  margin-bottom: 1rem;
+
+  p { margin: 0; }
+  em { font-style: italic; }
+}
+
+.research-theme__pubs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 2px solid var(--soft);
+}
+
+.research-pub {
+  padding: 0.4rem 0 0.4rem 1rem;
+
+  .research-pub__title {
+    display: block;
+    font-weight: 500;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  a.research-pub__title:hover { color: var(--accent); text-decoration: underline; }
+
+  .research-pub__meta {
+    font-size: 0.85rem;
+    color: var(--muted);
+    .research-pub__venue { font-style: italic; }
+  }
+}
+
+/* --------------------------------------------------------------------------
    Talks & Teaching rows
    -------------------------------------------------------------------------- */
 

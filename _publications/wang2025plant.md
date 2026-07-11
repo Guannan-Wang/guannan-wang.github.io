@@ -1,6 +1,7 @@
 ---
 title: "Plant biology: Soil compaction rewires gene expression across root cell types"
-type: journal
+type: commentary
+citekey: wang2025plant
 date: 2025-01-01
 venue: "Current Biology"
 authors: "Guannan Wang, Jos\\'e R Dinneny"

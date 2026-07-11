@@ -1,6 +1,7 @@
 ---
 title: "Transcriptome responses to single and combined stressors in seagrass populations from pristine and impacted sites reveal local adaptive features and core stress-response genes"
 type: journal
+citekey: nguyen2025transcriptome
 date: 2025-01-01
 venue: "Science of the Total Environment"
 authors: "Hung Manh Nguyen, Beery Yaakov, Pedro Beca-Carretero, Gabriele Procaccini, Guannan Wang, Maheshi Dassanayake, Gidon Winters, Simon Barak"

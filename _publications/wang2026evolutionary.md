@@ -1,6 +1,7 @@
 ---
 title: "Evolutionary diversity of cell-type-specific expression and stress response in Brassicaceae roots"
 type: journal
+citekey: wang2026evolutionary
 date: 2026-01-01
 venue: "Nature Communications"
 authors: "Guannan Wang, Kook Hui Ryu, Andrea Dinneny, Jiyoung Lee, Dong-Ha Oh, Prashanth Ramachandran, Marina Oliva, Ryan Lister, Jos\\'e R Dinneny, John Schiefelbein, et al."

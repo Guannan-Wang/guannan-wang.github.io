@@ -1,0 +1,51 @@
+# Research themes shown on /research/. Each theme lists representative
+# publications by their citekey (the _publications/<citekey>.md basename).
+# Optional: add `image: /images/research/<file>.jpg` to a theme for a figure.
+- title: "Genomic adaptation in extremophytes"
+  blurb: >
+    How do plants that thrive in extreme soils — high salinity, toxic boron,
+    low phosphate — achieve stress tolerance? I use comparative genomics and
+    transcriptomics of extremophytes such as *Schrenkiella parvula* and their
+    stress-sensitive relatives to uncover the molecular basis of adaptation.
+  papers:
+    - wang2021cross
+    - tran2023balancing
+    - eshel2022positive
+    - fan2018transcriptomic
+    - wijesinghege2022spatiotemporal
+    - tran2021multiple
+    - wang2019plant
+
+- title: "Cell-type-specific stress responses in roots"
+  blurb: >
+    Roots are built from specialized cell types that respond to stress in
+    distinct ways. Using single-cell and cell-type-resolved approaches, I study
+    how these responses are wired and how they diverge across species over
+    evolutionary time.
+  papers:
+    - wang2026evolutionary
+    - sun2022divergence
+    - wang2025plant
+
+- title: "Chromatin & epigenomic control of stress"
+  blurb: >
+    Chromatin state shapes which genes respond to environmental change. I
+    investigate how histone variants such as H2A.Z and DNA-methylation dynamics
+    regulate transcriptional responses to nutrient limitation and abiotic stress.
+  papers:
+    - zahraeifard2018rice
+    - foroozani2020low
+    - wang2026bidirectional
+
+- title: "Comparative transcriptomics & computational tools"
+  blurb: >
+    Comparing stress responses across diverse, often non-model plants — from
+    mangroves and seagrasses to desert crucifers — reveals conserved and
+    lineage-specific strategies. I also build computational tools (e.g., GOMCL)
+    to make sense of large functional-genomics datasets.
+  papers:
+    - nguyen2025transcriptome
+    - short2024comparative
+    - bird2024delayed
+    - wimalagunasekara2026comparative
+    - wang2020gomcl

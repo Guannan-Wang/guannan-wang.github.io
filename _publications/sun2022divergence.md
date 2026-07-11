@@ -1,6 +1,7 @@
 ---
 title: "Divergence in the ABA gene regulatory network underlies differential growth control"
 type: journal
+citekey: sun2022divergence
 date: 2022-01-01
 venue: "Nature plants"
 authors: "Ying Sun, Dong-Ha Oh, Lina Duan, Prashanth Ramachandran, Andrea Ramirez, Anna Bartlett, Kieu-Nga Tran, Guannan Wang, Maheshi Dassanayake, Jos\\'e R Dinneny"

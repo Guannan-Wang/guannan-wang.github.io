@@ -1,6 +1,7 @@
 ---
 title: "GOMCL: a toolkit to cluster, evaluate, and extract non-redundant associations of Gene Ontology-based functions"
 type: journal
+citekey: wang2020gomcl
 date: 2020-01-01
 venue: "BMC bioinformatics"
 authors: "Guannan Wang, Dong-Ha Oh, Maheshi Dassanayake"

@@ -1,6 +1,7 @@
 ---
 title: "Cross species multi-omics reveals cell wall sequestration and elevated global transcript abundance as mechanisms of boron tolerance in plants"
 type: journal
+citekey: wang2021cross
 date: 2021-01-01
 venue: "New Phytologist"
 authors: "Guannan Wang, Sandra Feuer DiTusa, Dong-Ha Oh, Achim D Herrmann, David G Mendoza-Cozatl, Malcolm A O'Neill, Aaron P Smith, Maheshi Dassanayake"
