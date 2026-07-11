@@ -1,4 +1,9 @@
-{% if site.url %}
+{% if jekyll.environment == "development" %}
+  {% comment %}Root-relative URLs in dev so the preview works from any host
+  (Codespaces forwarded domains, localhost). Production builds run with
+  JEKYLL_ENV=production and keep absolute URLs.{% endcomment %}
+  {% assign base_path = "" %}
+{% elsif site.url %}
   {% assign base_path = site.url | append: site.baseurl %}
 {% else %}
   {% assign base_path = site.github.url %}

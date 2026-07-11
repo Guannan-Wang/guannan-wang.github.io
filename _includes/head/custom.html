@@ -19,4 +19,22 @@
 <link rel="icon" href="/images/favicon.ico"/>
 <meta name="theme-color" content="var(--global-bg-color)"/>
 
+{% if jekyll.environment == "development" %}
+<!-- Dev only: LiveReload through GitHub Codespaces forwarded-port subdomains.
+     Jekyll's own injected livereload tag points at an unreachable host there;
+     this loads the client from the -35729 subdomain instead. Inert in
+     production builds (JEKYLL_ENV=production) and on plain localhost. -->
+<script>
+  (function () {
+    var m = window.location.hostname.match(/^(.+)-(\d+)\.(app\.github\.dev)$/);
+    if (!m) return; // not a Codespaces forwarded domain — default behavior
+    var lrHost = m[1] + '-35729.' + m[3];
+    window.LiveReloadOptions = { host: lrHost, port: 443, https: true };
+    var s = document.createElement('script');
+    s.src = 'https://' + lrHost + '/livereload.js?snipver=1';
+    document.head.appendChild(s);
+  })();
+</script>
+{% endif %}
+
 <!-- end custom head snippets -->
