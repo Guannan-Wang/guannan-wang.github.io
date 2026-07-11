@@ -1,0 +1,29 @@
+# ============================================================================
+# Homepage "News" feed. Newest first; the 5 most recent are shown.
+# HOW TO EDIT (no coding needed):
+#   Each item is one "- date:" block with three fields:
+#     date:  YYYY-MM-DD  (controls order; only the month + year are shown)
+#     type:  paper | talk | award   (chooses the icon; anything else = a star)
+#     text:  the message. Markdown works — *italics* and [links](https://...).
+#   Add an item: copy a block to the top and edit it.
+#   Remove an item: delete its block.
+#   Keep the 2-space indentation exactly as shown.
+#
+# NOTE: the dates below are approximate starter entries — adjust to the real
+# dates, and add/remove items as things happen.
+# ============================================================================
+- date: 2026-06-01
+  type: paper
+  text: "New paper in *Nature Communications*: [Evolutionary diversity of cell-type-specific expression and stress response in Brassicaceae roots](https://doi.org/10.1038/s41467-026-73270-2)."
+
+- date: 2026-01-15
+  type: talk
+  text: "Chaired the Seed Genomics Workshop at Plant & Animal Genome 33 (PAG33), San Diego."
+
+- date: 2025-09-01
+  type: award
+  text: "Serving as Assistant Features Editor for *Plant Physiology* and Topic Editor for *Frontiers in Plant Science*."
+
+- date: 2025-06-01
+  type: paper
+  text: "New commentary in *Current Biology*: [Soil compaction rewires gene expression across root cell types](https://doi.org/10.1016/j.cub.2025.06.009)."
