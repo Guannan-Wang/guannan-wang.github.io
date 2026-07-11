@@ -1,12 +1,15 @@
 ---
 permalink: /
 title: "Guannan Wang"
-author_profile: true
+layout: home
+author_profile: false
 redirect_from:
   - /about/
   - /about.html
 ---
 
-Postdoctoral Researcher, Dinneny Lab, Stanford University/HHMI.
+## About
 
-*(Placeholder — real bio and homepage design arrive in later phases.)*
+I am a postdoctoral researcher in the Dinneny Lab at Stanford University and
+HHMI. *(Placeholder bio — replace this section with a fuller introduction; the
+News and Selected Publications sections join this page in later phases.)*
