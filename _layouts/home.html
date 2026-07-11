@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<div id="main" role="main" tabindex="-1">
+  {% include hero.html %}
+
+  {% if content != "" %}
+    <div class="home__content">
+      {{ content }}
+    </div>
+  {% endif %}
+</div>

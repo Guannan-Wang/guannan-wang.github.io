@@ -37,6 +37,17 @@ author:
   github           : "Guannan-Wang"
   linkedin         :
 
+  # Homepage hero (Phase 3). hero_bio is a placeholder — edit freely.
+  hero_bio         : "I study how plants sense and survive environmental stress, combining genomics, comparative omics, and single-cell approaches to understand root biology in extremophytes and crops."
+  research_tags:
+    - "Plant Biology"
+    - "Root Biology"
+    - "Stress Biology"
+    - "Extremophytes"
+    - "Genomics"
+    - "Comparative Omics"
+    - "Single-Cell Genomics"
+
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
   books:

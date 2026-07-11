@@ -1,5 +1,5 @@
 /* ==========================================================================
-   ACADEMIC DESIGN SYSTEM - base polish
+   ACADEMIC DESIGN SYSTEM - base polish + Phase 3 layout
    Imported last so it wins the cascade over the stock layout partials.
    ========================================================================== */
 
@@ -9,4 +9,272 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility: skip link + visible focus states
+   -------------------------------------------------------------------------- */
+
+.skip-link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(-120%);
+  z-index: 1000;
+  margin: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--radius-btn);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  transition: transform 0.15s ease-in-out;
+
+  &:focus {
+    transform: translateY(0);
+  }
+}
+
+/* Restore a clear keyboard focus ring the stock theme suppresses. */
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+#main:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+#main:focus {
+  outline: none; /* mouse click on skip target shouldn't ring; :focus-visible handles keyboard */
+}
+
+/* --------------------------------------------------------------------------
+   Masthead: brand + CV button
+   -------------------------------------------------------------------------- */
+
+.masthead__menu-item--lg a {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.masthead__cv-btn {
+  display: inline-block;
+  padding: 0.3rem 0.9rem !important;
+  margin: 0 !important;
+  background: var(--accent);
+  color: #fff !important;
+  border-radius: var(--radius-btn);
+  font-weight: 600;
+  transition: background 0.15s ease-in-out;
+
+  &:before { display: none !important; } /* suppress the greedy-nav underline effect */
+
+  &:hover {
+    background: var(--accent-hover);
+    color: #fff !important;
+  }
+}
+
+.masthead__menu-item--cv {
+  padding-left: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Split hero (Option C)
+   -------------------------------------------------------------------------- */
+
+.hero,
+.home__content {
+  max-width: var(--content-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1rem 0 var(--section-gap);
+}
+
+.hero__photo {
+  flex: 0 0 auto;
+  width: 180px;
+  max-width: 40vw;
+
+  img,
+  .hero__photo-placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 1px solid var(--border);
+  }
+}
+
+.hero__body {
+  flex: 1 1 320px;
+  min-width: 0;
+}
+
+.hero__name {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  margin: 0 0 0.35rem;
+  color: var(--ink);
+}
+
+.hero__role {
+  font-size: 1.05rem;
+  color: var(--sec);
+  margin: 0 0 0.9rem;
+}
+
+.hero__bio {
+  color: var(--ink);
+  margin: 0 0 1.1rem;
+}
+
+.hero__links {
+  list-style: none;
+  margin: 0 0 1.1rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.25rem;
+
+  li { margin: 0; }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+
+    &:hover { color: var(--accent-hover); text-decoration: underline; }
+  }
+}
+
+.hero__tags {
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.hero__tag {
+  margin: 0;
+  padding: 0.2rem 0.7rem;
+  background: var(--soft);
+  color: var(--accent);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+/* Hero metrics strip (degrades gracefully — renders nothing without data) */
+.hero__metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0.9rem 0 0;
+  border-top: 1px solid var(--border);
+}
+
+.hero__metric {
+  dt {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+  dd {
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--ink);
+    font-family: var(--font-serif);
+  }
+}
+
+.hero__metrics-note {
+  flex-basis: 100%;
+  margin: 0.2rem 0 0;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+/* --------------------------------------------------------------------------
+   Home body content
+   -------------------------------------------------------------------------- */
+
+.home__content {
+  h2 { font-family: var(--font-serif); }
+}
+
+/* --------------------------------------------------------------------------
+   Footer: social icons + copyright
+   -------------------------------------------------------------------------- */
+
+.page__footer-follow {
+  .social-icons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+
+    li { margin: 0; }
+
+    a {
+      color: var(--sec);
+      font-size: 1.25rem;
+      &:hover { color: var(--accent); }
+    }
+  }
+}
+
+.page__footer-copyright {
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive: stack the hero on narrow screens
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+  }
+
+  .hero__photo { width: 140px; }
+
+  .hero__links,
+  .hero__tags,
+  .hero__metrics {
+    justify-content: center;
+  }
+
+  .hero__name { font-size: 1.9rem; }
 }

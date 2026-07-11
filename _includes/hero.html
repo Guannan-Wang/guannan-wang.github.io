@@ -1,0 +1,56 @@
+{% include base_path %}
+
+<section class="hero" aria-label="Introduction">
+  <div class="hero__photo">
+    {% if site.author.avatar %}
+      <img
+        src="{% if site.author.avatar contains '://' %}{{ site.author.avatar }}{% else %}{{ base_path }}/images/{{ site.author.avatar }}{% endif %}"
+        alt="{{ site.author.name | default: site.name }}">
+    {% else %}
+      {%- comment -%} Placeholder silhouette until a real photo is added (set author.avatar). {%- endcomment -%}
+      <svg class="hero__photo-placeholder" viewBox="0 0 120 120" role="img"
+           aria-label="Photo placeholder for {{ site.author.name | default: site.name }}">
+        <circle cx="60" cy="60" r="60" fill="var(--soft)"/>
+        <circle cx="60" cy="47" r="22" fill="var(--muted)"/>
+        <path d="M20 108a40 40 0 0 1 80 0z" fill="var(--muted)"/>
+      </svg>
+    {% endif %}
+  </div>
+
+  <div class="hero__body">
+    <h1 class="hero__name">{{ site.name }}</h1>
+
+    {% if site.author.bio %}
+      <p class="hero__role">{{ site.author.bio }}</p>
+    {% endif %}
+
+    {% if site.author.hero_bio %}
+      <p class="hero__bio">{{ site.author.hero_bio }}</p>
+    {% endif %}
+
+    <ul class="hero__links">
+      {% if site.author.email %}
+        <li><a href="mailto:{{ site.author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a></li>
+      {% endif %}
+      {% if site.author.googlescholar %}
+        <li><a href="{{ site.author.googlescholar }}"><i class="ai ai-google-scholar ai-fw" aria-hidden="true"></i> Google Scholar</a></li>
+      {% endif %}
+      {% if site.author.orcid %}
+        <li><a href="{{ site.author.orcid }}"><i class="ai ai-orcid ai-fw" aria-hidden="true"></i> ORCID</a></li>
+      {% endif %}
+      {% if site.author.github %}
+        <li><a href="https://github.com/{{ site.author.github }}"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+      {% endif %}
+    </ul>
+
+    {% if site.author.research_tags %}
+      <ul class="hero__tags" aria-label="Research interests">
+        {% for tag in site.author.research_tags %}
+          <li class="hero__tag">{{ tag }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% include hero-metrics.html %}
+  </div>
+</section>
