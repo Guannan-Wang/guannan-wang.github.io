@@ -1,0 +1,40 @@
+---
+layout: archive
+title: "Research"
+permalink: /research/
+author_profile: true
+---
+
+{% include base_path %}
+
+<div class="research">
+  {% for theme in site.data.research %}
+    <section class="research-theme">
+      <h2 class="research-theme__title">{{ theme.title }}</h2>
+      {% if theme.image %}
+        <img class="research-theme__image" src="{{ theme.image | prepend: base_path }}" alt="">
+      {% endif %}
+      {% if theme.blurb %}
+        <div class="research-theme__blurb">{{ theme.blurb | markdownify }}</div>
+      {% endif %}
+      {% if theme.papers %}
+        <ul class="research-theme__pubs">
+          {% for key in theme.papers %}
+            {% assign p = site.publications | where: "citekey", key | first %}
+            {% if p %}
+              {% assign primary = p.links.doi | default: p.links.arxiv | default: p.links.pdf %}
+              <li class="research-pub">
+                {% if primary %}
+                  <a class="research-pub__title" href="{{ primary }}">{{ p.title }}</a>
+                {% else %}
+                  <span class="research-pub__title">{{ p.title }}</span>
+                {% endif %}
+                <span class="research-pub__meta"><span class="research-pub__venue">{{ p.venue }}</span>{% if p.date %}, {{ p.date | date: "%Y" }}{% endif %}</span>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </section>
+  {% endfor %}
+</div>

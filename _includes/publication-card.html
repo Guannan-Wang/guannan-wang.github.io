@@ -1,0 +1,50 @@
+{%- comment -%}
+  One publication card. Usage: {% include publication-card.html pub=post %}
+  Renders thumbnail (optional) | title + author line + venue + award +
+  action buttons (only those present) + Cite (if bibtex present).
+{%- endcomment -%}
+{% include base_path %}
+{%- assign pub = include.pub -%}
+
+<article class="pub-card" data-type="{{ pub.type }}">
+  {% if pub.thumbnail %}
+    {%- assign thumb = pub.thumbnail -%}
+    {%- unless thumb contains '://' -%}{%- assign thumb = thumb | prepend: base_path -%}{%- endunless -%}
+    <div class="pub-card__thumb">
+      <img src="{{ thumb }}" alt="" loading="lazy">
+    </div>
+  {% endif %}
+
+  <div class="pub-card__body">
+    {%- assign primary = pub.links.doi | default: pub.links.pdf | default: pub.links.arxiv -%}
+    <h3 class="pub-card__title">
+      {% if primary %}
+        {%- unless primary contains '://' -%}{%- assign primary = primary | prepend: base_path -%}{%- endunless -%}
+        <a href="{{ primary }}">{{ pub.title }}</a>
+      {% else %}
+        {{ pub.title }}
+      {% endif %}
+    </h3>
+
+    <p class="pub-card__authors">{% include author-bold.html authors=pub.authors %}</p>
+
+    <p class="pub-card__venue">
+      <span class="pub-card__venue-name">{{ pub.venue }}</span>{% if pub.date %}, {{ pub.date | date: "%Y" }}{% endif %}
+      {% if pub.award %}<span class="pub-card__award">{{ pub.award }}</span>{% endif %}
+    </p>
+
+    <div class="pub-card__actions">
+      {% if pub.links.pdf %}
+        {%- assign h = pub.links.pdf -%}{%- unless h contains '://' -%}{%- assign h = h | prepend: base_path -%}{%- endunless -%}
+        <a class="pub-btn" href="{{ h }}">PDF</a>
+      {% endif %}
+      {% if pub.links.doi %}<a class="pub-btn" href="{{ pub.links.doi }}">DOI</a>{% endif %}
+      {% if pub.links.arxiv %}<a class="pub-btn" href="{{ pub.links.arxiv }}">arXiv</a>{% endif %}
+      {% if pub.links.code %}<a class="pub-btn" href="{{ pub.links.code }}">Code</a>{% endif %}
+      {% if pub.bibtex %}
+        <button type="button" class="pub-btn pub-cite" aria-label="Copy BibTeX citation">Cite</button>
+        <pre class="pub-bibtex" hidden>{{ pub.bibtex | strip }}</pre>
+      {% endif %}
+    </div>
+  </div>
+</article>

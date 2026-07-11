@@ -5,8 +5,19 @@ permalink: /teaching/
 author_profile: true
 ---
 
-{% include base_path %}
-
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+<div class="teaching">
+  {% for group in site.data.teaching %}
+    <section class="talks__group">
+      <h2 class="talks__group-title">{{ group.role }}</h2>
+      {% for item in group.items %}
+        <div class="talk-row">
+          <div class="talk-row__date">{{ item.date }}</div>
+          <div class="talk-row__body">
+            <p class="talk-row__title">{{ item.title }}</p>
+            <p class="talk-row__venue">{{ item.org }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </section>
+  {% endfor %}
+</div>

@@ -1,0 +1,14 @@
+{%- comment -%}
+  Bolds the site owner's name inside an author string.
+  Usage: {% include author-bold.html authors=post.authors %}
+  Variants are matched longest-first (config order) so "Guannan Wang" wins
+  before "G. Wang". Never hand-bold names in the data.
+{%- endcomment -%}
+{%- assign _out = include.authors -%}
+{%- for v in site.author_name_variants -%}
+  {%- assign _wrapped = v | prepend: '<strong>' | append: '</strong>' -%}
+  {%- assign _out = _out | replace: _wrapped, v -%}
+  {%- comment -%} undo any prior wrap of this exact form, then (re)wrap — prevents double <strong> {%- endcomment -%}
+  {%- assign _out = _out | replace: v, _wrapped -%}
+{%- endfor -%}
+{{- _out -}}

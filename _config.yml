@@ -24,14 +24,14 @@ repository               : "Guannan-Wang/Guannan-Wang.github.io"
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
-  avatar           : # e.g. "profile.png" — added in Phase 6
+  avatar           : "myself.jpeg"
   name             : "Guannan Wang"
   pronouns         :
   bio              : "Postdoctoral Researcher, Dinneny Lab, Stanford University/HHMI"
   location         : "Stanford, CA"
   employer         : "Stanford University"
   uri              :
-  email            : "wangguannan2014@gmail.com"
+  email            : "guannanw@stanford.edu"
   googlescholar    : "https://scholar.google.com/citations?user=ZJqzi60AAAAJ"
   orcid            : "https://orcid.org/0000-0001-5277-1921"
   github           : "Guannan-Wang"
@@ -48,14 +48,26 @@ author:
     - "Comparative Omics"
     - "Single-Cell Genomics"
 
-# Publication Category - The following the list of publication categories and their headings
-publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'    
-  conferences:
-    title: 'Conference Papers'
+# Publications (Phase 4). Grouped by `type` (journal → conference → preprint),
+# newest-first within each group. Headings + fixed order:
+publication_types:
+  - key: journal
+    title: "Journal Articles"
+  - key: commentary
+    title: "Commentaries & Editorials"
+  - key: conference
+    title: "Conference Papers"
+  - key: preprint
+    title: "Preprints"
+
+# Author name variants auto-bolded in publication author lists (longest first,
+# so "Guannan Wang" is matched before "G. Wang"). Never hand-bold in the data.
+author_name_variants:
+  - "Guannan Wang"
+  - "Wang, Guannan"
+  - "G. Wang"
+  - "Wang, G."
+  - "Wang G"
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews

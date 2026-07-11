@@ -1,0 +1,19 @@
+{%- comment -%}
+  Homepage "Selected Publications": publications flagged `selected: true`,
+  newest-first, capped at 4, with a link to the full list. Renders nothing
+  when no publication is flagged (graceful degradation).
+{%- endcomment -%}
+{% include base_path %}
+{% assign selected = site.publications | where: "selected", true | sort: "date" | reverse %}
+{% if selected and selected.size > 0 %}
+  <section class="home-section selected-pubs">
+    <div class="home-section__head">
+      <h2 class="home-section__title">Selected Publications</h2>
+      <a class="home-section__more" href="{{ base_path }}/publications/">View all &rarr;</a>
+    </div>
+    {% for post in selected limit: 4 %}
+      {% include publication-card.html pub=post %}
+    {% endfor %}
+    <p class="pubs__note">* Co-first author</p>
+  </section>
+{% endif %}
