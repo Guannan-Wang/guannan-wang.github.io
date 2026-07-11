@@ -1,0 +1,49 @@
+# Weekly Google Scholar metrics sync → _data/scholar.yml.
+# Commits only when the numbers change, then triggers a Pages deploy.
+# Optional: add a SERPAPI_KEY repo secret for a more reliable fetch than scraping.
+name: Sync Scholar metrics
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"      # Mondays, 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch metrics (never fails; caches last-good)
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+        run: python scripts/scholar_sync.py
+
+      - name: Commit and deploy if changed
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -n "$(git status --porcelain _data/scholar.yml)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add _data/scholar.yml
+            git commit -m "chore: update scholar metrics"
+            git push
+            # GITHUB_TOKEN pushes don't auto-trigger deploy.yml, so fire it explicitly.
+            gh workflow run deploy.yml --ref main || true
+            echo "Metrics changed → committed and triggered deploy."
+          else
+            echo "No change in metrics; nothing to commit."
+          fi
