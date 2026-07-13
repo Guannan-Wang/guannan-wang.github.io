@@ -13,7 +13,7 @@ bibtex: |
     title     = {Spatiotemporal gene expression atlas of the extremophyte Schrenkiella parvula},
     author    = {Wijesinghege, Chathura and Wang, Guannan and Pantha, Pramod and Tran, Kieu-Nga and Dassanayake, Maheshi},
     journal   = {bioRxiv},
-    pages     = {2022--10},
+    pages     = {2022–10},
     year      = {2022},
     publisher = {Cold Spring Harbor Laboratory},
     doi       = {10.1101/2022.10.24.513627}

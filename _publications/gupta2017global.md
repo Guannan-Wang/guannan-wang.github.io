@@ -15,7 +15,7 @@ bibtex: |
     journal   = {ACS Chemical biology},
     volume    = {12},
     number    = {12},
-    pages     = {3012--3021},
+    pages     = {3012–3021},
     year      = {2017},
     publisher = {American Chemical Society},
     doi       = {10.1021/acschembio.7b00681}

@@ -13,7 +13,7 @@
       {% for item in items limit: 5 %}
         <li class="news__item">
           <span class="news__icon news__icon--{{ item.type | default: 'news' }}" aria-hidden="true">
-            <i class="{% case item.type %}{% when 'paper' %}fa-solid fa-file-lines{% when 'talk' %}fa-solid fa-microphone-lines{% when 'award' %}fa-solid fa-award{% else %}fa-solid fa-star{% endcase %}"></i>
+            <i class="{% case item.type %}{% when 'paper' %}fa-solid fa-file-lines{% when 'talk' %}fa-solid fa-microphone-lines{% when 'award' %}fa-solid fa-award{% when 'service' %}fa-solid fa-pen-nib{% else %}fa-solid fa-star{% endcase %}"></i>
           </span>
           <div class="news__body">
             <span class="news__date">{{ item.date | date: "%b %Y" }}</span>

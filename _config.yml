@@ -12,7 +12,7 @@ site_theme               : "academic" # custom design system (_sass/theme/_acade
 title                    : "Guannan Wang"
 title_separator          : "-"
 name                     : &name "Guannan Wang"
-description              : &description "Guannan Wang — Postdoctoral Researcher, Stanford University"
+description              : &description "Guannan Wang — Postdoctoral Associate, Dinneny Lab, Stanford University & HHMI"
 url                      : https://guannan-wang.github.io
 # Custom domain (later): change `url` above to "https://www.yourdomain.com",
 # rename CNAME.disabled → CNAME with the domain as its only line, add the DNS
@@ -27,7 +27,7 @@ author:
   avatar           : "myself.jpeg"
   name             : "Guannan Wang"
   pronouns         :
-  bio              : "Postdoctoral Researcher, Dinneny Lab, Stanford University/HHMI"
+  bio              : "Postdoctoral Associate, Dinneny Lab, Stanford University & HHMI"
   location         : "Stanford, CA"
   employer         : "Stanford University"
   uri              :
@@ -37,8 +37,8 @@ author:
   github           : "Guannan-Wang"
   linkedin         :
 
-  # Homepage hero (Phase 3). hero_bio is a placeholder — edit freely.
-  hero_bio         : "I study how plants sense and survive environmental stress, combining genomics, comparative omics, and single-cell approaches to understand root biology in extremophytes and crops."
+  # Homepage hero tagline (one sentence under the name). Edit freely.
+  hero_bio         : "I study how extremophytes — plants that thrive under environmental extremes — evolved diverse strategies for stress tolerance, using comparative multi-omics and single-cell genomics to help translate their solutions into climate-resilient crops."
   research_tags:
     - "Plant Biology"
     - "Root Biology"
@@ -98,7 +98,7 @@ facebook:
   app_id                 :
   publisher              :
 og_image                 : "og-card.png"  # 1200x630 share card in /images/
-og_description           : "Postdoctoral Researcher, Dinneny Lab, Stanford University & HHMI — plant, root, and stress biology; genomics and single-cell approaches."
+og_description           : "Postdoctoral Associate, Dinneny Lab, Stanford University & HHMI — plant, root, and stress biology; genomics and single-cell approaches."
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:

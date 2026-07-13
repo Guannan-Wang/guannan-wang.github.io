@@ -15,7 +15,7 @@ bibtex: |
     journal   = {Journal of experimental botany},
     volume    = {69},
     number    = {20},
-    pages     = {4907--4919},
+    pages     = {4907–4919},
     year      = {2018},
     publisher = {Oxford University Press UK},
     doi       = {10.1093/jxb/ery244}

@@ -3,27 +3,40 @@
 # HOW TO EDIT (no coding needed):
 #   Each item is one "- date:" block with three fields:
 #     date:  YYYY-MM-DD  (controls order; only the month + year are shown)
-#     type:  paper | talk | award   (chooses the icon; anything else = a star)
+#     type:  paper | talk | award | service  (chooses the icon; anything else = a star)
 #     text:  the message. Markdown works — *italics* and [links](https://...).
-#   Add an item: copy a block to the top and edit it.
+#   Add an item: copy a block and edit it (order doesn't matter — sorted by date).
 #   Remove an item: delete its block.
 #   Keep the 2-space indentation exactly as shown.
-#
-# NOTE: the dates below are approximate starter entries — adjust to the real
-# dates, and add/remove items as things happen.
 # ============================================================================
-- date: 2026-06-01
+- date: 2026-06-15
+  type: paper
+  text: "New preprint on *bioRxiv*: [Comparative genomics reveals potential mechanisms of invasion in *Phragmites australis* (common reed)](https://doi.org/10.64898/2026.06.12.731924)."
+
+- date: 2026-05-20
   type: paper
   text: "New paper in *Nature Communications*: [Evolutionary diversity of cell-type-specific expression and stress response in Brassicaceae roots](https://doi.org/10.1038/s41467-026-73270-2)."
 
-- date: 2026-01-15
+- date: 2026-01-12
   type: talk
   text: "Chaired the Seed Genomics Workshop at Plant & Animal Genome 33 (PAG33), San Diego."
 
 - date: 2025-09-01
-  type: award
-  text: "Serving as Assistant Features Editor for *Plant Physiology* and Topic Editor for *Frontiers in Plant Science*."
+  type: service
+  text: "Serving as Topic Editor for *Frontiers in Plant Science*."
 
-- date: 2025-06-01
+- date: 2025-08-14
+  type: paper
+  text: "New paper in the *Journal of Experimental Botany*: [The HIGH CHLOROPHYLL FLUORESCENCE 244 homolog CrHCF244 is required for psbA (D1) translation in *Chlamydomonas reinhardtii*](https://doi.org/10.1093/jxb/eraf362)."
+
+- date: 2025-07-25
+  type: paper
+  text: "New paper in *Science of the Total Environment*: [Transcriptome responses of two *Halophila stipulacea* seagrass populations to thermal and nutrient stressors](https://doi.org/10.1016/j.scitotenv.2025.179623)."
+
+- date: 2025-07-21
   type: paper
   text: "New commentary in *Current Biology*: [Soil compaction rewires gene expression across root cell types](https://doi.org/10.1016/j.cub.2025.06.009)."
+
+- date: 2025-01-01
+  type: service
+  text: "Serving as Assistant Features Editor for *Plant Physiology*."
