@@ -13,7 +13,7 @@ bibtex: |
     title     = {Comparative genomics reveals potential mechanisms of invasion in Phragmites australis (common reed)},
     author    = {Wimalagunasekara, Samadhi and Garcia, Richard S and Nguyen, Thu T and Pantha, Pramod and Wang, Guannan and Oh, Dong-Ha and Bickford, Wesley A and Kowalski, Kurt P and Clay, Keith and Dassanayake, Maheshi},
     journal   = {bioRxiv},
-    pages     = {2026--06},
+    pages     = {2026–06},
     year      = {2026},
     publisher = {Cold Spring Harbor Laboratory},
     doi       = {10.64898/2026.06.12.731924}

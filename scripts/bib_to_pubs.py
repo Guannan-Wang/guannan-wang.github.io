@@ -122,8 +122,38 @@ def _read_value(text, i, n):
     return text[start:i].strip(), i
 
 
+# LaTeX accent command -> Unicode, e.g. \'e -> é, \"o -> ö, \~n -> ñ.
+_ACCENTS = {
+    "'": {"a": "á", "e": "é", "i": "í", "o": "ó", "u": "ú", "y": "ý", "n": "ń",
+          "c": "ć", "s": "ś", "z": "ź", "A": "Á", "E": "É", "I": "Í", "O": "Ó",
+          "U": "Ú", "N": "Ń", "C": "Ć"},
+    "`": {"a": "à", "e": "è", "i": "ì", "o": "ò", "u": "ù", "A": "À", "E": "È"},
+    '"': {"a": "ä", "e": "ë", "i": "ï", "o": "ö", "u": "ü", "y": "ÿ", "A": "Ä",
+          "O": "Ö", "U": "Ü"},
+    "^": {"a": "â", "e": "ê", "i": "î", "o": "ô", "u": "û", "A": "Â", "E": "Ê",
+          "O": "Ô"},
+    "~": {"a": "ã", "n": "ñ", "o": "õ", "A": "Ã", "N": "Ñ", "O": "Õ"},
+    "=": {"a": "ā", "e": "ē", "o": "ō", "u": "ū", "i": "ī"},
+    ".": {"z": "ż", "Z": "Ż"},
+}
+
+
+def latex_decode(s):
+    def repl(m):
+        return _ACCENTS.get(m.group(1), {}).get(m.group(2), m.group(2))
+    # \'e , \'{e} , {\'e}  (leading brace, if any, is stripped later)
+    s = re.sub(r"\\([`'\"^~=.])\s*\{?(\w)\}?", repl, s)
+    for a, b in ((r"\c{c}", "ç"), (r"\c c", "ç"), (r"\c{C}", "Ç"), (r"\ss", "ß"),
+                 (r"\o", "ø"), (r"\O", "Ø"), (r"\aa", "å"), (r"\AA", "Å"),
+                 (r"\l", "ł"), (r"\L", "Ł"), (r"\ae", "æ"), (r"\&", "&")):
+        s = s.replace(a, b)
+    return s
+
+
 def _clean_value(v):
     v = re.sub(r"\s+", " ", v)
+    v = latex_decode(v)
+    v = v.replace("---", "—").replace("--", "–")   # LaTeX em/en dashes
     v = v.replace("{", "").replace("}", "").strip()
     return v
 

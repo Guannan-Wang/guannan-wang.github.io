@@ -14,7 +14,7 @@ bibtex: |
     author    = {Fan*, Ligang and Wang*, Guannan and Hu, Wei and Pantha, Pramod and Tran, Kieu-Nga and Zhang, Hua and An, Lizhe and Dassanayake, Maheshi and Qiu, Quan-Sheng},
     journal   = {Plant physiology and biochemistry},
     volume    = {132},
-    pages     = {475--489},
+    pages     = {475–489},
     year      = {2018},
     publisher = {Elsevier Masson},
     doi       = {10.1016/j.plaphy.2018.09.024}

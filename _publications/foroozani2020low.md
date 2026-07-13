@@ -15,7 +15,7 @@ bibtex: |
     journal   = {Plant physiology},
     volume    = {182},
     number    = {3},
-    pages     = {1494--1509},
+    pages     = {1494–1509},
     year      = {2020},
     publisher = {American Society of Plant Biologists},
     doi       = {10.1104/pp.19.01153}

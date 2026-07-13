@@ -15,7 +15,7 @@ bibtex: |
     journal   = {New Phytologist},
     volume    = {230},
     number    = {5},
-    pages     = {1985--2000},
+    pages     = {1985–2000},
     year      = {2021},
     doi       = {10.1111/nph.17295}
   }
